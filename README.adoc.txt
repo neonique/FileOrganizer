@@ -1,0 +1,19 @@
+= FileOrganizer
+:icons: font
+:icon-set: fa
+:source-highlighter: rouge
+:experimental:
+
+== Beschreibung
+FileOrganizer ist ein Programm welches das Verschieben von Dateien im Workflow des Alltags vereinfachen soll.
+Durch Anhang eines Präfixes an den Namen einer Datei, beispielsweise __note_Vorlesungsnotizen.docx_, 
+wird diese automatisiert in den vorherig festgelegten Ordner verlegt und das Präfix wieder entfernt. 
+Dabei soll das Tool um direktes Hochladen in die eigene Cloud erweiterbar sein.
+(Das Programm ist für Windows konzipiert) 
+
+== Ausstehende Erweiterungen
+* Hintergrundausführung
+* Togglebare Ordnererstellung bei nicht vorhandenem Zielordner
+* UI fürs Hinzufügen und Löschen von Identidier-Zielordner-Paaren, Änderung des Source-Ordners (Standardmäßig Desktop)
+* Automatisches Pop-Up fürs erstellen eines neuen ID-Ziel-Paares bei Benutzung eines unbekannten Identifiers (_unknownid_data.txt)
+* [Support für Cloud-Ordner]
