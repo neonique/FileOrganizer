@@ -25,7 +25,7 @@ public class FileMoverLocal implements FileMover {
     public void moveAll() {
 
         List<String> files = srcLoader.getTargetFilenames();
-        files.forEach(file -> move(file));
+        files.forEach(this::move);
     }
     private void move(String file) {
 

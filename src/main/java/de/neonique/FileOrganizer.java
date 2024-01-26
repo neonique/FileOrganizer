@@ -2,8 +2,6 @@ package de.neonique;
 
 /*Ein Programm um Dateien vom Desktop mit einer vorangeschrieben ID automatisch in Ordner zu sortieren.
 Bsp.: _dnd_charsheet.pdf -> D:/Fun/DND/charsheet.pdf
-*
-*
 * */
 
 import de.neonique.file_mover.FileMover;
