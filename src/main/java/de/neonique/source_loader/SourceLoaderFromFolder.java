@@ -1,7 +1,5 @@
 package de.neonique.source_loader;
 
-import de.neonique.source_loader.SourceLoader;
-
 import java.io.File;
 import java.nio.file.Path;
 import java.util.ArrayList;

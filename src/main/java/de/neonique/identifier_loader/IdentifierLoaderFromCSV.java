@@ -1,7 +1,5 @@
 package de.neonique.identifier_loader;
 
-import de.neonique.identifier_loader.IdentifierLoader;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
