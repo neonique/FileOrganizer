@@ -9,16 +9,16 @@ import java.util.List;
 
 public class IdentifierLoaderFromCSV implements IdentifierLoader {
 
-    private Path filePath;
+    private final Path identifierPath;
     public IdentifierLoaderFromCSV(){
-        this.filePath = Paths.get("./src/main/resources/identifier.csv");
+        this.identifierPath = Paths.get("./src/main/resources/identifier.csv");
     }
 
     @Override
     public HashMap<String, String> getIdentifier() {
         List<String> lines;
         try {
-            lines = Files.readAllLines(filePath);
+            lines = Files.readAllLines(identifierPath);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
