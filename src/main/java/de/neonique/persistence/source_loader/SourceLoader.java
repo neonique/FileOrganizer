@@ -6,5 +6,5 @@ import java.util.List;
 public interface SourceLoader {
 
     List<String> getTargetFilenames();
-    Path getPath();
+    String getPath();
 }
