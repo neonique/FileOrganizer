@@ -9,29 +9,37 @@ import java.nio.file.Paths;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class TestSourceLoaderFromFolder {
 
     SourceLoader srcLoader;
+    ConfigLoader configLoader;
     @BeforeEach
     void init(){
-        srcLoader = new SourceLoaderFromFolder(mock(ConfigLoader.class));
+        configLoader = mock(ConfigLoader.class);
+        srcLoader = new SourceLoaderFromFolder(configLoader);
     }
-    @Test()
+    @Test
     @DisplayName("get default src path, when no custom path is configured")
     void test_01(){
         String expectedPath = Paths.get(System.getProperty("user.home") + "/Desktop/").toString();
+        when(configLoader.getLocalSrcFolder()).thenReturn(null);
 
         String srcPath = srcLoader.getPath();
 
         assertThat(expectedPath).isEqualTo(srcPath);
     }
 /*
-    @Test()
+    @Test
     @DisplayName("get custom path if it is configured")
     void test_02(){
-        String expectedPath = Paths.get(System.getProperty("user.home") + "/Desktop/").toString();
+        String expectedPath = "./src/test/resources/testSource/";
+        when(configLoader.getLocalSrcFolder()).thenReturn(expectedPath);
 
+        String srcPath = srcLoader.getPath();
+
+        assertThat(expectedPath).isNotEqualTo(srcPath);
     }
 */
 }
