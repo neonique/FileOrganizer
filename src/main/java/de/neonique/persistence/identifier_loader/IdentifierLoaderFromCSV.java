@@ -3,14 +3,15 @@ package de.neonique.persistence.identifier_loader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 
 public class IdentifierLoaderFromCSV implements IdentifierLoader {
 
     private Path filePath;
-    public IdentifierLoaderFromCSV(Path filePath){
-        this.filePath = filePath;
+    public IdentifierLoaderFromCSV(){
+        this.filePath = Paths.get("./src/main/resources/identifier.csv");
     }
 
     @Override

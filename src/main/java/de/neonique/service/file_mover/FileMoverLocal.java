@@ -9,7 +9,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
-
+//Kann später durch FileMover ausgetauscht werden, der Lokales, sowie Cloud movement unterstützt
 public class FileMoverLocal implements FileMover {
     private final IdentifierLoader idLoader;
     private final SourceLoader srcLoader;

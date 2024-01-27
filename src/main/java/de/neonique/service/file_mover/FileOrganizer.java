@@ -20,14 +20,12 @@ public class FileOrganizer {
 
         //Identifier mit Destination Path werden geladen
         //Wird später durch UI eingefügt
-        Path csvFilePath = Paths.get("./src/main/resources/identifier.csv"); //Pfad der Identifier
-        IdentifierLoader idLoader = new IdentifierLoaderFromCSV(csvFilePath);
+        IdentifierLoader idLoader = new IdentifierLoaderFromCSV();
         //HashMap<String, String> identifier = idLoader.getIdentifier();
 
         //Source Path und possible IDs werden geladen
         //Wird später durch UI eingefügt
-        Path desktopPath = Paths.get(System.getProperty("user.home") + "/Desktop/"); //Pfad in dem der SRCLoader suchen soll
-        SourceLoader srcLoader = new SourceLoaderFromFolder(desktopPath);
+        SourceLoader srcLoader = new SourceLoaderFromFolder();
         //List<String> targetFiles = srcLoader.getTargetFilenames();
 
 
