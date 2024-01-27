@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="de.neonique.persistence.source_loader.TestSourceLoaderFromFolder" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-27T22:49:30" hostname="DESKTOP-2SU9F9I" time="0.329">
+<testsuite name="de.neonique.persistence.source_loader.TestSourceLoaderFromFolder" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-27T23:04:58" hostname="DESKTOP-2SU9F9I" time="0.325">
   <properties/>
-  <testcase name="get default src path, when no custom path is configured" classname="de.neonique.persistence.source_loader.TestSourceLoaderFromFolder" time="0.328"/>
-  <testcase name="get custom path if it is configured" classname="de.neonique.persistence.source_loader.TestSourceLoaderFromFolder" time="0.001"/>
+  <testcase name="get custom path target filenames, when there is a target" classname="de.neonique.persistence.source_loader.TestSourceLoaderFromFolder" time="0.325"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

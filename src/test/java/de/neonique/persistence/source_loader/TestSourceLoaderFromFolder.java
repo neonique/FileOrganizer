@@ -6,6 +6,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -47,4 +49,29 @@ public class TestSourceLoaderFromFolder {
         assertThat(expectedPath).isEqualTo(srcPath);
     }
 
+    @Test
+    @DisplayName("get custom path target filenames, when there is no target")
+    void test_03(){
+        String path = "./src/test/resources/testSource/";
+        configLoader = mock(ConfigLoader.class);
+        when(configLoader.getLocalSrcFolder()).thenReturn(path);
+        srcLoader = new SourceLoaderFromFolder(configLoader);
+
+        List<String> targetFilenames = srcLoader.getTargetFilenames();
+
+        assertThat(targetFilenames).isEmpty();
+    }
+
+    @Test
+    @DisplayName("get custom path target filenames, when there is a target")
+    void test_04(){
+        String path = "./src/test/resources/testSource/targets/";
+        configLoader = mock(ConfigLoader.class);
+        when(configLoader.getLocalSrcFolder()).thenReturn(path);
+        srcLoader = new SourceLoaderFromFolder(configLoader);
+
+        List<String> targetFilenames = srcLoader.getTargetFilenames();
+
+        assertThat(targetFilenames).containsExactly("_test_testData.txt");
+    }
 }
