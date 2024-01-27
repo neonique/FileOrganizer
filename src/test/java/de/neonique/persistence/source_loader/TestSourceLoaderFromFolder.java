@@ -6,11 +6,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -73,5 +71,20 @@ public class TestSourceLoaderFromFolder {
         List<String> targetFilenames = srcLoader.getTargetFilenames();
 
         assertThat(targetFilenames).containsExactly("_test_testData.txt");
+    }
+
+    @Test
+    @DisplayName("when the path is invalid the default path is used")
+    void test_05(){
+        String targetPath = "./src/test/resources/testSource/notreal/";
+        configLoader = mock(ConfigLoader.class);
+        when(configLoader.getLocalSrcFolder()).thenReturn(targetPath);
+        srcLoader = new SourceLoaderFromFolder(configLoader);
+        String defaultPath = Paths.get(System.getProperty("user.home") + "/Desktop/").toString();
+
+        String srcPath = srcLoader.getPath();
+
+        assertThat(defaultPath).isEqualTo(srcPath);
+
     }
 }
