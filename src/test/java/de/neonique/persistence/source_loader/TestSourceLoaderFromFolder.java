@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.nio.file.Paths;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -17,29 +18,33 @@ public class TestSourceLoaderFromFolder {
     ConfigLoader configLoader;
     @BeforeEach
     void init(){
-        configLoader = mock(ConfigLoader.class);
-        srcLoader = new SourceLoaderFromFolder(configLoader);
+        configLoader = null;
+        srcLoader = null;
     }
     @Test
     @DisplayName("get default src path, when no custom path is configured")
     void test_01(){
-        String expectedPath = Paths.get(System.getProperty("user.home") + "/Desktop/").toString();
+        configLoader = mock(ConfigLoader.class);
         when(configLoader.getLocalSrcFolder()).thenReturn(null);
+        srcLoader = new SourceLoaderFromFolder(configLoader);
+        String expectedPath = Paths.get(System.getProperty("user.home") + "/Desktop/").toString();
 
         String srcPath = srcLoader.getPath();
 
         assertThat(expectedPath).isEqualTo(srcPath);
     }
-/*
+
     @Test
     @DisplayName("get custom path if it is configured")
     void test_02(){
         String expectedPath = "./src/test/resources/testSource/";
+        configLoader = mock(ConfigLoader.class);
         when(configLoader.getLocalSrcFolder()).thenReturn(expectedPath);
+        srcLoader = new SourceLoaderFromFolder(configLoader);
 
         String srcPath = srcLoader.getPath();
 
-        assertThat(expectedPath).isNotEqualTo(srcPath);
+        assertThat(expectedPath).isEqualTo(srcPath);
     }
-*/
+
 }
