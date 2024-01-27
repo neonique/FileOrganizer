@@ -87,4 +87,5 @@ public class TestSourceLoaderFromFolder {
         assertThat(defaultPath).isEqualTo(srcPath);
 
     }
+
 }
