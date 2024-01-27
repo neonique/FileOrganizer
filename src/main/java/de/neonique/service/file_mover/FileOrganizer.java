@@ -4,19 +4,17 @@ package de.neonique.service.file_mover;
 Bsp.: _dnd_charsheet.pdf -> D:/Fun/DND/charsheet.pdf
 * */
 
-import de.neonique.service.file_mover.FileMover;
-import de.neonique.service.file_mover.FileMoverLocal;
+import de.neonique.persistence.config_loader.ConfigLoader;
 import de.neonique.persistence.identifier_loader.IdentifierLoader;
 import de.neonique.persistence.identifier_loader.IdentifierLoaderFromCSV;
 import de.neonique.persistence.source_loader.SourceLoader;
 import de.neonique.persistence.source_loader.SourceLoaderFromFolder;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
 public class FileOrganizer {
 
     public static void main(String[] args) {
+        //Enthält Konfigurationswerte wie Source Path
+        ConfigLoader configLoader = new ConfigLoader();
 
         //Identifier mit Destination Path werden geladen
         //Wird später durch UI eingefügt
@@ -25,7 +23,7 @@ public class FileOrganizer {
 
         //Source Path und possible IDs werden geladen
         //Wird später durch UI eingefügt
-        SourceLoader srcLoader = new SourceLoaderFromFolder();
+        SourceLoader srcLoader = new SourceLoaderFromFolder(configLoader);
         //List<String> targetFiles = srcLoader.getTargetFilenames();
 
 

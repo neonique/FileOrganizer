@@ -1,25 +1,21 @@
 package de.neonique.persistence.source_loader;
 
-import com.opencsv.CSVReader;
+import de.neonique.persistence.config_loader.ConfigLoader;
 
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SourceLoaderFromFolder implements SourceLoader {
 
-    private final String configPath;
-    private final String configId = "localSrcFolder";
     private final String defaultSrcPath = Paths.get(System.getProperty("user.home") + "/Desktop/").toString();
+    private ConfigLoader configLoader;
     private String srcPath;
     private File srcFolder;
 
-    public SourceLoaderFromFolder(){
-        this.configPath = "./src/main/resources/config.csv";
+    public SourceLoaderFromFolder(ConfigLoader configLoader){
+        this.configLoader = configLoader;
         this.srcPath = getSrcPath();
         this.srcFolder = new File(srcPath);
     }
@@ -27,23 +23,10 @@ public class SourceLoaderFromFolder implements SourceLoader {
     private String getSrcPath() {
 
         //Laden eines Custom Paths aus config Datei
-        try {
-            FileReader filereader = new FileReader(configPath);
-
-            CSVReader csvReader = new CSVReader(filereader);
-            String[] record;
-
-            while ((record = csvReader.readNext()) != null) {
-                if(record[0].equals(configId)){
-                    return record[1];
-                }
-            }
-        } catch (IndexOutOfBoundsException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        String srcPath = configLoader.getLocalSrcFolder();
+        if(srcPath != null){
+            return srcPath;
         }
-
         return defaultSrcPath;
     }
 
