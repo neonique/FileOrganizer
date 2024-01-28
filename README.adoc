@@ -28,7 +28,7 @@ FileOrganizer is still in developement. Because of this, it can currently not ru
 
 === Context
 
-image::Context.bmp[]
+image::Context.jpg[]
 
 === Glossar
 * *IDENTIFIER* - Prefix that triggers file transfer
