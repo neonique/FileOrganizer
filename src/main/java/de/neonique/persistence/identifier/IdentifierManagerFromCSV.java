@@ -1,6 +1,10 @@
 package de.neonique.persistence.identifier;
 
+import de.neonique.exception.IncorrectFilePathException;
 import de.neonique.persistence.csv.LoadCsv;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashMap;
 
 public class IdentifierManagerFromCSV implements IdentifierManager {
@@ -20,14 +24,16 @@ public class IdentifierManagerFromCSV implements IdentifierManager {
         HashMap<String, String> identifier = new HashMap<>();
         identifier = LoadCsv.extractPairs(identifierPath);  //id-path-pairs
 
-        validate(identifier);
+        validatePath(identifier);
 
         return identifier;
     }
 
-    private void validate(HashMap<String, String> identifier) {
-        //Insert validation here, just for identifier fromat
+    private void validatePath(HashMap<String, String> identifier) {
+        for (String paths : identifier.values()) {
+            if(!Files.exists(Path.of(paths))){
+                throw new IncorrectFilePathException();
+            }
+        }
     }
-
-
 }

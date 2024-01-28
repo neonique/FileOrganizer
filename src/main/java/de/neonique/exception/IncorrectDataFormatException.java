@@ -1,4 +1,4 @@
-package de.neonique.persistence.csv;
+package de.neonique.exception;
 
 public class IncorrectDataFormatException extends RuntimeException{
     public IncorrectDataFormatException(Throwable e){

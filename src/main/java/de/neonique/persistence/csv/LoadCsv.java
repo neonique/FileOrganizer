@@ -1,6 +1,8 @@
 package de.neonique.persistence.csv;
 
 import com.opencsv.CSVReader;
+import de.neonique.exception.IncorrectDataFormatException;
+import de.neonique.exception.IncorrectFilePathException;
 
 import java.io.FileReader;
 import java.io.IOException;
