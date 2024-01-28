@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="de.neonique.persistence.identifier.TestIdentifierManagerFromCSV" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-28T12:41:58" hostname="DESKTOP-2SU9F9I" time="0.049">
+<testsuite name="de.neonique.persistence.identifier.TestIdentifierManagerFromCSV" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-28T12:53:54" hostname="DESKTOP-2SU9F9I" time="0.001">
   <properties/>
-  <testcase name="get identifier from csv with correct format" classname="de.neonique.persistence.identifier.TestIdentifierManagerFromCSV" time="0.049"/>
+  <testcase name="get identifier from csv with correct format" classname="de.neonique.persistence.identifier.TestIdentifierManagerFromCSV" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
