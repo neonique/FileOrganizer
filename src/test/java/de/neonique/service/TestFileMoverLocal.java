@@ -2,7 +2,7 @@ package de.neonique.service;
 
 import de.neonique.service.interfaces.IdentifierManager;
 import de.neonique.service.interfaces.SourceManager;
-import de.neonique.service.file_mover.FileMover;
+import de.neonique.service.interfaces.FileMover;
 import de.neonique.service.file_mover.FileMoverLocal;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

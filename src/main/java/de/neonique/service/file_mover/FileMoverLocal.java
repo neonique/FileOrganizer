@@ -1,5 +1,6 @@
 package de.neonique.service.file_mover;
 
+import de.neonique.service.interfaces.FileMover;
 import de.neonique.service.interfaces.IdentifierManager;
 import de.neonique.service.interfaces.SourceManager;
 

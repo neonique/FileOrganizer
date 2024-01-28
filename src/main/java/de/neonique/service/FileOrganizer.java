@@ -9,7 +9,7 @@ import de.neonique.service.interfaces.IdentifierManager;
 import de.neonique.persistence.identifier.IdentifierManagerFromCSV;
 import de.neonique.service.interfaces.SourceManager;
 import de.neonique.persistence.source.SourceManagerFromFolder;
-import de.neonique.service.file_mover.FileMover;
+import de.neonique.service.interfaces.FileMover;
 import de.neonique.service.file_mover.FileMoverLocal;
 import de.neonique.stereotypes.Root;
 
