@@ -9,7 +9,9 @@ FileOrganizer as a tool wants to bring order back to your messy desktop. Everyth
 
 == Documentation
 === Startup
-FileOrganizer is still in developement. Because of this, it can currently not run as a background process yet. Starting it with Gradle will work as intended, though it will terminate after the files are moverd.
+FileOrganizer is still in developement. Because of this, it can currently not run as a background process yet. Starting it with Gradle will work as intended, though it will terminate after the files are moved.
+New id-path-pairs can be added to the _identifier.csv_ in the format _ID,PATH_ per line.
+custom paths can be added to the _config.csv_ via adding _localSrcFolder,PATH_
 
 === Features
 * Moving files to a target path by using a dedicated identifier prefix
