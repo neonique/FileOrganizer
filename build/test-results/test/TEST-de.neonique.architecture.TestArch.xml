@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="de.neonique.architecture.TestArch" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-28T00:00:58" hostname="DESKTOP-2SU9F9I" time="0.544">
-  <properties/>
-  <testcase name="layerTest" classname="de.neonique.architecture.TestArch" time="0.542"/>
-  <testcase name="root" classname="de.neonique.architecture.TestArch" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

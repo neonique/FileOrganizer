@@ -1,41 +1,27 @@
 package de.neonique.persistence.identifier;
 
-import com.opencsv.CSVReader;
-
-import java.io.FileReader;
-import java.io.IOException;
+import de.neonique.persistence.csv.LoadCsv;
 import java.util.HashMap;
 
 public class IdentifierManagerFromCSV implements IdentifierManager {
-
+    private final String defaultIdentifierPath = "./src/main/resources/identifier.csv";
     private final String identifierPath;
     public IdentifierManagerFromCSV(){
-        this.identifierPath = "./src/main/resources/identifier.csv";
+        this.identifierPath = defaultIdentifierPath;
+    }
+    //For testing purposes
+    IdentifierManagerFromCSV(String identifierPath){
+        this.identifierPath = String.valueOf(identifierPath);   //for safety purposes
     }
 
     @Override
-    public HashMap<String, String> getIdentifier() {
+    public HashMap<String, String> loadIdentifier() {
 
         HashMap<String, String> identifier = new HashMap<>();
-
-        try {
-            FileReader filereader = new FileReader(identifierPath);
-
-            CSVReader csvReader = new CSVReader(filereader);
-            String[] record;
-
-            // we are going to read data line by line
-            while ((record = csvReader.readNext()) != null) {
-                String id = record[0];
-                String path = record[1];
-                identifier.put(id, path);
-            }
-        } catch (IndexOutOfBoundsException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        identifier = LoadCsv.extractPairs(identifierPath);  //id-path-pairs
 
         return identifier;
     }
+
+
 }

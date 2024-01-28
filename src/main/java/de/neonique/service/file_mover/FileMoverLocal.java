@@ -28,7 +28,7 @@ public class FileMoverLocal implements FileMover {
     }
     private void move(String file) {
 
-        HashMap<String,String> identifierTable = idLoader.getIdentifier();
+        HashMap<String,String> identifierTable = idLoader.loadIdentifier();
         String id = getIdentifierFromFilename(file);
 
         if(isIdentifierDefined(identifierTable, id)){
