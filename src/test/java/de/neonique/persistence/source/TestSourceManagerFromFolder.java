@@ -37,7 +37,7 @@ public class TestSourceManagerFromFolder {
     @Test
     @DisplayName("get custom path if it is configured")
     void test_02(){
-        String expectedPath = "./src/test/resources/testSource/";
+        String expectedPath = "./src/test/resources/test_source/";
         configManager = mock(ConfigManager.class);
         when(configManager.getLocalSrcFolder()).thenReturn(expectedPath);
         srcLoader = new SourceManagerFromFolder(configManager);
@@ -50,7 +50,7 @@ public class TestSourceManagerFromFolder {
     @Test
     @DisplayName("get custom path target filenames, when there is no target")
     void test_03(){
-        String path = "./src/test/resources/testSource/";
+        String path = "./src/test/resources/test_source/";
         configManager = mock(ConfigManager.class);
         when(configManager.getLocalSrcFolder()).thenReturn(path);
         srcLoader = new SourceManagerFromFolder(configManager);
@@ -63,7 +63,7 @@ public class TestSourceManagerFromFolder {
     @Test
     @DisplayName("get custom path target filenames, when there is a target")
     void test_04(){
-        String path = "./src/test/resources/testSource/targets/";
+        String path = "./src/test/resources/test_source/targets/";
         configManager = mock(ConfigManager.class);
         when(configManager.getLocalSrcFolder()).thenReturn(path);
         srcLoader = new SourceManagerFromFolder(configManager);
@@ -76,7 +76,7 @@ public class TestSourceManagerFromFolder {
     @Test
     @DisplayName("when the path is invalid the default path is used")
     void test_05(){
-        String targetPath = "./src/test/resources/testSource/notreal/";
+        String targetPath = "./src/test/resources/test_source/notreal/";
         configManager = mock(ConfigManager.class);
         when(configManager.getLocalSrcFolder()).thenReturn(targetPath);
         srcLoader = new SourceManagerFromFolder(configManager);

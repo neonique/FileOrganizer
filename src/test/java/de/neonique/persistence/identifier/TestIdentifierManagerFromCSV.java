@@ -21,13 +21,12 @@ public class TestIdentifierManagerFromCSV {
     void test_01(){
         identifierManager = new IdentifierManagerFromCSV("./src/test/resources/test_identifier.csv");
         HashMap<String,String> expected = new HashMap<>();
-        expected.put("test1", "./src/test/resources/testSource/");
-        expected.put("test2", "./src/test/resources/testSource/targets/");
+        expected.put("test1", "./src/test/resources/test_source/");
+        expected.put("test2", "./src/test/resources/test_source/targets/");
 
 
         HashMap<String, String> identifier = identifierManager.loadIdentifier();
 
         assertThat(identifier).containsExactlyEntriesOf(expected);
     }
-
 }

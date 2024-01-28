@@ -20,7 +20,13 @@ public class IdentifierManagerFromCSV implements IdentifierManager {
         HashMap<String, String> identifier = new HashMap<>();
         identifier = LoadCsv.extractPairs(identifierPath);  //id-path-pairs
 
+        validate(identifier);
+
         return identifier;
+    }
+
+    private void validate(HashMap<String, String> identifier) {
+        //Insert validation here, just for identifier fromat
     }
 
 
