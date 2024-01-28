@@ -9,7 +9,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
-//Kann später durch FileMover ausgetauscht werden, der Lokales, sowie Cloud movement unterstützt
+//Using Static Methods and moving files in this class is bad practice
+//FileMover should use a separate class in the persistence layer with interface implementation
+//needs heavier refactoring
 public class FileMoverLocal implements FileMover {
     private final IdentifierManager idLoader;
     private final SourceManager srcLoader;
@@ -45,15 +47,15 @@ public class FileMoverLocal implements FileMover {
 
 
     private static String trimFilename(String targetFile) {
-        String trimmed = "";
+        StringBuilder trimmed = new StringBuilder();
         String [] splitted = targetFile.split("_");
         for(int i = 2; i < splitted.length; i++){
-            trimmed += splitted[i];
+            trimmed.append(splitted[i]);
             if(i < splitted.length - 1){
-                trimmed += "_";
+                trimmed.append("_");
             }
         }
-        return trimmed;
+        return trimmed.toString();
     }
 
     private static String getIdentifierFromFilename(String targetFile) {

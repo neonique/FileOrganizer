@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.mockito.Mockito.mock;
 
+//Paths and ids are already verified, but it is important to test for external io exceptions
 public class TestFileMoverLocal {
     FileMover fileMover;
     @BeforeEach
@@ -19,7 +20,7 @@ public class TestFileMoverLocal {
         fileMover = new FileMoverLocal(idLoader, srcLoader);
     }
     @Test
-    @DisplayName("moving a file")
+    @DisplayName("test filename trimming")
     void test_01(){
 
     }
