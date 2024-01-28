@@ -17,3 +17,4 @@ Dabei soll das Tool um direktes Hochladen in die eigene Cloud erweiterbar sein.
 * UI fürs Hinzufügen und Löschen von Identifier-Zielordner-Paaren, Änderung des Source-Ordners (Standardmäßig Desktop)
 * Automatisches Pop-Up fürs erstellen eines neuen ID-Ziel-Paares bei Benutzung eines unbekannten Identifiers (_unknownid_data.txt)
 * [Support für Cloud-Ordner]
+
