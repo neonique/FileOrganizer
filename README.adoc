@@ -25,6 +25,7 @@ FileOrganizer is still in developement. Because of this, it can currently not ru
 === Quality objectives
 * Easy replaceability of persistence layer
 * Open design for easy extension
+* Using dependency injection framework like Spring for easier testing and clearer dependencies (pending)
 
 === Context
 
