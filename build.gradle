@@ -26,5 +26,5 @@ test {
 }
 
 application {
-    mainClass = 'de.neonique.service.FileOrganizer'
+    mainClass = 'de.neonique.controller.FileOrganizer'
 }
