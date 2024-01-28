@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.neonique.persistence.source.TestSourceManagerFromFolder" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-01-28T12:41:58" hostname="DESKTOP-2SU9F9I" time="0.306">
+  <properties/>
+  <testcase name="get default src path, when no custom path is configured" classname="de.neonique.persistence.source.TestSourceManagerFromFolder" time="0.298"/>
+  <testcase name="get custom path if it is configured" classname="de.neonique.persistence.source.TestSourceManagerFromFolder" time="0.001"/>
+  <testcase name="get custom path target filenames, when there is no target" classname="de.neonique.persistence.source.TestSourceManagerFromFolder" time="0.005"/>
+  <testcase name="get custom path target filenames, when there is a target" classname="de.neonique.persistence.source.TestSourceManagerFromFolder" time="0.001"/>
+  <testcase name="when the path is invalid the default path is used" classname="de.neonique.persistence.source.TestSourceManagerFromFolder" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

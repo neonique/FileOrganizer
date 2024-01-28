@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="de.neonique.persistence.csv.TestLoadCsv" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-01-28T12:39:41" hostname="DESKTOP-2SU9F9I" time="0.048">
+<testsuite name="de.neonique.persistence.csv.TestLoadCsv" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-01-28T12:41:58" hostname="DESKTOP-2SU9F9I" time="0.005">
   <properties/>
-  <testcase name="loading pair correctly from csv" classname="de.neonique.persistence.csv.TestLoadCsv" time="0.042"/>
+  <testcase name="loading pair correctly from csv" classname="de.neonique.persistence.csv.TestLoadCsv" time="0.0"/>
   <testcase name="throw exception, when there is only an id" classname="de.neonique.persistence.csv.TestLoadCsv" time="0.002"/>
-  <testcase name="throw exception, when data is blank" classname="de.neonique.persistence.csv.TestLoadCsv" time="0.0"/>
+  <testcase name="throw exception, when data is blank" classname="de.neonique.persistence.csv.TestLoadCsv" time="0.001"/>
   <testcase name="throw exception, when id is blank" classname="de.neonique.persistence.csv.TestLoadCsv" time="0.0"/>
-  <testcase name="throw exception, when id and data are blank" classname="de.neonique.persistence.csv.TestLoadCsv" time="0.001"/>
-  <testcase name="empty map for blank file" classname="de.neonique.persistence.csv.TestLoadCsv" time="0.001"/>
+  <testcase name="throw exception, when id and data are blank" classname="de.neonique.persistence.csv.TestLoadCsv" time="0.0"/>
+  <testcase name="empty map for blank file" classname="de.neonique.persistence.csv.TestLoadCsv" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
