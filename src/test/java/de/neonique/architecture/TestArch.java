@@ -4,7 +4,9 @@ import com.tngtech.archunit.core.importer.ImportOption;
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;
+import de.neonique.stereotypes.Root;
 
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
 @AnalyzeClasses(packages = "de.neonique", importOptions = {
         ImportOption.DoNotIncludeTests.class})
@@ -20,5 +22,7 @@ public class TestArch {
             //.whereLayer("UI").mayNotBeAccessedByAnyLayer()
             //.whereLayer("Service").mayOnlyBeAccessedByLayers("UI")
             .whereLayer("Persistence").mayOnlyBeAccessedByLayers("Service");
-
+    @ArchTest
+    ArchRule root = classes().that().areAnnotatedWith(Root.class)
+            .should().onlyBeAccessed().byClassesThat().resideInAPackage("..ui..");
 }

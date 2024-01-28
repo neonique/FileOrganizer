@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="de.neonique.persistence.source_loader.TestSourceLoaderFromFolder" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-27T23:28:55" hostname="DESKTOP-2SU9F9I" time="0.322">
-  <properties/>
-  <testcase name="get custom path target filenames, even when backslashes are used" classname="de.neonique.persistence.source_loader.TestSourceLoaderFromFolder" time="0.322"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

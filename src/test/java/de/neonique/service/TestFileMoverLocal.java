@@ -1,7 +1,7 @@
 package de.neonique.service;
 
-import de.neonique.persistence.identifier_loader.IdentifierLoader;
-import de.neonique.persistence.source_loader.SourceLoader;
+import de.neonique.persistence.identifier.IdentifierManager;
+import de.neonique.persistence.source.SourceManager;
 import de.neonique.service.file_mover.FileMover;
 import de.neonique.service.file_mover.FileMoverLocal;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,8 +14,8 @@ public class TestFileMoverLocal {
     FileMover fileMover;
     @BeforeEach
     void init(){
-        IdentifierLoader idLoader = mock(IdentifierLoader.class);
-        SourceLoader srcLoader = mock(SourceLoader.class);
+        IdentifierManager idLoader = mock(IdentifierManager.class);
+        SourceManager srcLoader = mock(SourceManager.class);
         fileMover = new FileMoverLocal(idLoader, srcLoader);
     }
     @Test

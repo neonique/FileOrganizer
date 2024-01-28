@@ -1,7 +1,7 @@
 package de.neonique.service.file_mover;
 
-import de.neonique.persistence.identifier_loader.IdentifierLoader;
-import de.neonique.persistence.source_loader.SourceLoader;
+import de.neonique.persistence.identifier.IdentifierManager;
+import de.neonique.persistence.source.SourceManager;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -11,10 +11,10 @@ import java.util.HashMap;
 import java.util.List;
 //Kann später durch FileMover ausgetauscht werden, der Lokales, sowie Cloud movement unterstützt
 public class FileMoverLocal implements FileMover {
-    private final IdentifierLoader idLoader;
-    private final SourceLoader srcLoader;
+    private final IdentifierManager idLoader;
+    private final SourceManager srcLoader;
 
-    public FileMoverLocal(IdentifierLoader idLoader, SourceLoader srcLoader) {
+    public FileMoverLocal(IdentifierManager idLoader, SourceManager srcLoader) {
 
         this.idLoader = idLoader;
         this.srcLoader = srcLoader;
