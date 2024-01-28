@@ -8,21 +8,23 @@ import de.neonique.stereotypes.Root;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
+
+//Will work better with Spring or likewise framework
+//Maybe rework to use onionArchitecture()
 @AnalyzeClasses(packages = "de.neonique", importOptions = {
         ImportOption.DoNotIncludeTests.class})
 public class TestArch {
-
     @ArchTest
     ArchRule layerTest = layeredArchitecture()
             .consideringAllDependencies()
-            //.layer("UI").definedBy("..ui..")
+            .layer("Controller").definedBy("..controller..")
             .layer("Service").definedBy("..service..")
             .layer("Persistence").definedBy("..persistence..")
 
-            //.whereLayer("UI").mayNotBeAccessedByAnyLayer()
-            //.whereLayer("Service").mayOnlyBeAccessedByLayers("UI")
-            .whereLayer("Persistence").mayOnlyBeAccessedByLayers("Service");
+            .whereLayer("Controller").mayNotBeAccessedByAnyLayer()
+            .whereLayer("Service").mayOnlyBeAccessedByLayers("Controller", "Persistence");
+            //.whereLayer("Persistence").mayNotBeAccessedByAnyLayer();
     @ArchTest
     ArchRule root = classes().that().areAnnotatedWith(Root.class)
-            .should().onlyBeAccessed().byClassesThat().resideInAPackage("..ui..");
+            .should().onlyBeAccessed().byClassesThat().resideInAPackage("..controller..");
 }

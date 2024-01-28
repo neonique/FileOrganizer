@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="de.neonique.persistence.identifier.TestIdentifierManagerFromCSV" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-28T22:28:53" hostname="DESKTOP-2SU9F9I" time="0.003">
+<testsuite name="de.neonique.persistence.identifier.TestIdentifierManagerFromCSV" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-28T22:53:13" hostname="DESKTOP-2SU9F9I" time="0.003">
   <properties/>
   <testcase name="get identifier from csv with correct format" classname="de.neonique.persistence.identifier.TestIdentifierManagerFromCSV" time="0.002"/>
   <testcase name="throws exception in case of invalid path from identifier.csv" classname="de.neonique.persistence.identifier.TestIdentifierManagerFromCSV" time="0.001"/>
