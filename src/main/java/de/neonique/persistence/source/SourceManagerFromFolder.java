@@ -1,6 +1,7 @@
 package de.neonique.persistence.source;
 
 import de.neonique.persistence.config.ConfigManager;
+import de.neonique.service.interfaces.SourceManager;
 
 import java.io.File;
 import java.nio.file.Files;

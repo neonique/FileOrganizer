@@ -1,6 +1,7 @@
 package de.neonique.persistence.source;
 
 import de.neonique.persistence.config.ConfigManager;
+import de.neonique.service.interfaces.SourceManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

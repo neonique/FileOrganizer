@@ -1,7 +1,7 @@
 package de.neonique.service.file_mover;
 
-import de.neonique.persistence.identifier.IdentifierManager;
-import de.neonique.persistence.source.SourceManager;
+import de.neonique.service.interfaces.IdentifierManager;
+import de.neonique.service.interfaces.SourceManager;
 
 import java.io.IOException;
 import java.nio.file.Files;

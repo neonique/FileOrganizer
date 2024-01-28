@@ -5,9 +5,9 @@ Bsp.: _dnd_charsheet.pdf -> D:/Fun/DND/charsheet.pdf
 * */
 
 import de.neonique.persistence.config.ConfigManager;
-import de.neonique.persistence.identifier.IdentifierManager;
+import de.neonique.service.interfaces.IdentifierManager;
 import de.neonique.persistence.identifier.IdentifierManagerFromCSV;
-import de.neonique.persistence.source.SourceManager;
+import de.neonique.service.interfaces.SourceManager;
 import de.neonique.persistence.source.SourceManagerFromFolder;
 import de.neonique.service.file_mover.FileMover;
 import de.neonique.service.file_mover.FileMoverLocal;

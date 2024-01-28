@@ -1,4 +1,4 @@
-package de.neonique.persistence.identifier;
+package de.neonique.service.interfaces;
 
 import java.util.HashMap;
 

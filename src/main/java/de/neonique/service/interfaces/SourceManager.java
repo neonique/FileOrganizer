@@ -1,4 +1,4 @@
-package de.neonique.persistence.source;
+package de.neonique.service.interfaces;
 
 import java.util.List;
 
