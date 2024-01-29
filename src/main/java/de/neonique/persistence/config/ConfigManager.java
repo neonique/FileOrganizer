@@ -1,10 +1,7 @@
 package de.neonique.persistence.config;
 
-import com.opencsv.CSVReader;
 import de.neonique.persistence.csv.LoadCsv;
 
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.HashMap;
 
 public class ConfigManager {
@@ -24,7 +21,7 @@ public class ConfigManager {
     }
     private HashMap<String,String> loadConfig(){
 
-        HashMap<String,String> config = new HashMap<>();
+        HashMap<String,String> config;
 
         config = LoadCsv.extractPairs(configPath);
 
